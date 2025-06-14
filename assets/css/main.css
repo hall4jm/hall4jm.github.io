@@ -98,7 +98,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #312450;
+		background: #0F1117;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -115,7 +115,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: rgba(255, 255, 255, 0.55);
+		color: #EDEDED;
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 16.5pt;
 		font-weight: normal;
@@ -158,11 +158,11 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #ffffff;
+			color: #EDEDED;
 		}
 
 	strong, b {
-		color: #ffffff;
+		color: #EDEDED;
 		font-weight: bold;
 	}
 
@@ -175,7 +175,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: #EDEDED;
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
@@ -282,9 +282,9 @@ input, select, textarea {
 	}
 
 	code {
-		background: rgba(255, 255, 255, 0.05);
+		background: #1E293B;
 		border-radius: 0.25em;
-		border: solid 1px rgba(255, 255, 255, 0.15);
+		border: solid 1px #334155;
 		font-family: "Courier New", monospace;
 		font-size: 0.9em;
 		margin: 0 0.25em;
@@ -1799,7 +1799,7 @@ input, select, textarea {
 
 	.box {
 		border-radius: 0.25em;
-		border: solid 1px rgba(255, 255, 255, 0.15);
+		border: solid 1px #334155;
 		margin-bottom: 2em;
 		padding: 1.5em;
 	}
@@ -1914,7 +1914,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #ffffff;
+			background-color: #EDEDED;
 			color: #312450 !important;
 		}
 
@@ -1988,8 +1988,8 @@ input, select, textarea {
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		border-radius: 0.25em;
-		border: solid 1px rgba(255, 255, 255, 0.15);
-		background: rgba(255, 255, 255, 0.05);
+		border: solid 1px #334155;
+		background: #1E293B;
 		margin: 0 0 2em 0;
 	}
 
@@ -2295,7 +2295,7 @@ input, select, textarea {
 		}
 
 	label {
-		color: #ffffff;
+		color: #EDEDED;
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.7em 0;
@@ -2313,10 +2313,10 @@ input, select, textarea {
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: rgba(255, 255, 255, 0.05);
+		background: #1E293B;
 		border-radius: 0.25em;
 		border: none;
-		border: solid 1px rgba(255, 255, 255, 0.15);
+		border: solid 1px #334155;
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -2340,7 +2340,7 @@ input, select, textarea {
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #ffffff;
+			border-color: #EDEDED;
 			box-shadow: 0 0 0 1px #ffffff;
 		}
 
@@ -2355,8 +2355,8 @@ input, select, textarea {
 	}
 
 		select option {
-			color: #ffffff;
-			background: #312450;
+			color: #EDEDED;
+			background: #0F1117;
 		}
 
 		select:focus::-ms-value {
@@ -2399,7 +2399,7 @@ input, select, textarea {
 		input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
-			color: rgba(255, 255, 255, 0.55);
+			color: #EDEDED;
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
@@ -2425,9 +2425,9 @@ input, select, textarea {
 
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
-				background: rgba(255, 255, 255, 0.05);
+				background: #1E293B;
 				border-radius: 0.25em;
-				border: solid 1px rgba(255, 255, 255, 0.15);
+				border: solid 1px #334155;
 				content: '';
 				display: inline-block;
 				font-size: 0.8em;
@@ -2443,14 +2443,14 @@ input, select, textarea {
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
 			background: #ffffff;
-			border-color: #ffffff;
+			border-color: #EDEDED;
 			color: #b74e91;
 			content: '\f00c';
 		}
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #ffffff;
+			border-color: #EDEDED;
 			box-shadow: 0 0 0 1px #ffffff;
 		}
 
@@ -3144,7 +3144,7 @@ input, select, textarea {
 	}
 
 		table tbody tr {
-			border: solid 1px rgba(255, 255, 255, 0.15);
+			border: solid 1px #334155;
 			border-left: 0;
 			border-right: 0;
 		}
@@ -3158,7 +3158,7 @@ input, select, textarea {
 		}
 
 		table th {
-			color: #ffffff;
+			color: #EDEDED;
 			font-size: 1em;
 			font-weight: bold;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -3178,7 +3178,7 @@ input, select, textarea {
 		}
 
 			table.alt tbody tr td {
-				border: solid 1px rgba(255, 255, 255, 0.15);
+				border: solid 1px #334155;
 				border-left-width: 0;
 				border-top-width: 0;
 			}
@@ -3377,7 +3377,7 @@ input, select, textarea {
 
 		#header > .title {
 			border: 0;
-			color: #ffffff;
+			color: #EDEDED;
 			display: block;
 			font-size: 1.25em;
 			font-weight: bold;
@@ -3418,11 +3418,11 @@ input, select, textarea {
 					}
 
 						#header > nav > ul > li a:hover {
-							color: rgba(255, 255, 255, 0.55);
+							color: #EDEDED;
 						}
 
 						#header > nav > ul > li a.active {
-							color: #ffffff;
+							color: #EDEDED;
 						}
 
 		@media screen and (max-width: 736px) {
@@ -3524,7 +3524,7 @@ input, select, textarea {
 
 	#sidebar {
 		padding: 2.5em 2.5em 0.5em 2.5em ;
-		background: #312450;
+		background: #0F1117;
 		cursor: default;
 		height: 100vh;
 		left: 0;
@@ -3777,11 +3777,11 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:hover {
-				color: rgba(255, 255, 255, 0.55);
+				color: #EDEDED;
 			}
 
 			#sidebar nav a.active {
-				color: #ffffff;
+				color: #EDEDED;
 			}
 
 				#sidebar nav a.active:after {
@@ -3907,3 +3907,54 @@ input, select, textarea {
 			}
 
 		}
+
+/* Modern wrapper color updates */
+.wrapper.style1 {
+    background-color: #0F1117;
+}
+.wrapper.style2,
+.wrapper.style3 {
+    background-color: #1E293B;
+}
+
+/* Button updates */
+.button {
+    background-color: #3B82F6;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2563EB;
+}
+
+/* Link styling */
+a {
+    color: #f4f7f6;
+}
+
+a:hover {
+    color: #34D399;
+    text-decoration: underline;
+}
+
+/* Headings and icon accents */
+h1, h2, h3, h4, h5, h6 {
+    color: #EDEDED;
+}
+
+.contact h3 {
+    color: #3B82F6;
+}
+
+/* Feature boxes and icon colors */
+.features {
+    background: #1E293B;
+    border: solid 1px #334155;
+}
+.icon.major {
+    background: #3B82F6;
+    color: #0F1117;
+}
