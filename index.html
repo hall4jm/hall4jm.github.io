@@ -6,9 +6,10 @@
 -->
 <html>
   <head>
-    <title>Justin Hall Portfolio</title>
+    <title>Justin Hall — Data Scientist</title>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport" />
+    <meta name="description" content="Portfolio of Justin Hall — data scientist working on applied LLMs and retrieval, deep learning for computer vision, and reinforcement learning environments." />
     <link href="assets/css/main.css" rel="stylesheet" />
     <noscript>
       <link href="assets/css/noscript.css" rel="stylesheet" />
@@ -27,10 +28,10 @@
               <a href="#one">Skills</a>
             </li>
             <li>
-              <a href="#two">Recent Projects</a>
+              <a href="#two">Projects</a>
             </li>
             <li>
-              <a href="#three">Contact Me</a>
+              <a href="#three">Contact</a>
             </li>
           </ul>
         </nav>
@@ -42,7 +43,7 @@
       <section class="wrapper style1 fullscreen fade-up" id="intro">
         <div class="inner">
           <h1>Justin Hall</h1>
-          <p>Highly motivated data scientist with experience applying predictive and prescriptive analytics in research and professional settings. Enthusiastic about helping businesses to grow through insights from their data. Proficient in building deep learning models, data mining, programming, and problem-solving. </p>
+          <p>Data scientist building production-minded ML systems — from retrieval-augmented LLM applications to deep learning for medical imaging to reinforcement learning environments. I care about reproducibility, calibrated evaluation, and turning models into decisions a stakeholder can act on.</p>
           <ul class="actions">
             <li>
               <a class="button scrolly" href="#one">Learn more</a>
@@ -57,32 +58,32 @@
       <section class="wrapper style3 fade-up" id="one">
         <div class="inner">
           <h2>Skills</h2>
-          <p></p>
+          <p>What I reach for, organized by the kind of problem.</p>
           <div class="features">
             <section>
               <span class="icon brands major fa-python"></span>
-              <h3>Python</h3>
-              <p>Proficient with many data science and machine learning Python libraries: Pytorch, Tensorflow, PyCaret, scikit-learn</p>
+              <h3>Python &amp; Data Science</h3>
+              <p>Day-to-day stack: pandas / polars, NumPy, scikit-learn, LightGBM, XGBoost, Optuna, MLflow. Comfortable with uv, typed Python (Pydantic v2), pytest, ruff.</p>
             </section>
             <section>
-              <span class="icon brands major fa-r-project"></span>
-              <h3>R</h3>
-              <p>Experienced in data cleaning and model building in R</p>
+              <span class="icon solid major fa-comment-dots"></span>
+              <h3>LLMs &amp; RAG</h3>
+              <p>Retrieval-augmented generation end to end: sentence-transformers / BGE embeddings, ChromaDB, asymmetric query encoding, agentic tool-use, Ragas for evaluation. Provider-agnostic across Anthropic, OpenAI, Groq, and local Ollama.</p>
             </section>
             <section>
-              <span class="icon solid major fa-desktop"></span>
-              <h3>Programming</h3>
-              <p>Proficient in many languages including C# and Java</p>
+              <span class="icon solid major fa-brain"></span>
+              <h3>Deep Learning &amp; CV</h3>
+              <p>PyTorch and fastai for transfer learning on imaging tasks (CNN architectures, MixUp, discriminative LRs, 1-cycle scheduler). LIME and Grad-CAM for model interpretability. Trained on GPU via Colab.</p>
             </section>
             <section>
-              <span class="icon brands major fa-aws"></span>
-              <h3>Amazon Web Services</h3>
-              <p>Experienced working with AWS to process big data on emulators</p>
+              <span class="icon solid major fa-robot"></span>
+              <h3>Reinforcement Learning</h3>
+              <p>Building custom OpenAI Gym environments to spec (action/observation spaces, render loops, packaging). Tabular Q-learning, self-play, and state canonicalization.</p>
             </section>
           </div>
           <ul class="actions">
             <li>
-              <a class="button" href="#two">Learn more</a>
+              <a class="button" href="#two">See projects</a>
             </li>
           </ul>
         </div>
@@ -95,52 +96,51 @@
               <div style="display: flex; align-items: flex-start;">
                 <div class="thumbnail" style="flex: 0 0 auto; margin-right: 20px;">
                   <picture>
+                    <source media="(min-width: 800px)" srcset="images/boxbox.png" />
+                    <img alt="BoxBox UI: a hybrid F1 chatbot answering a question about Ferrari's strategy with inline Wikipedia citations" src="images/boxbox.png" style="width: 200px; height: auto; border-radius: 8px;" />
+                  </picture>
+                </div>
+                <div style="flex: 1;">
+                  <h2>BoxBox — Hybrid RAG Chatbot for Formula 1</h2>
+                  <p>A retrieval-augmented chatbot for Formula 1 race history (2018–2025). Narrative questions are answered with inline Wikipedia citations from a Chroma vector index; factual lookups (winners, qualifying, standings) are routed through the Jolpica F1 API via LLM tool-calls. The split — <em>narrative via RAG, facts via tools</em> — fixes the failure mode where pure RAG drifts on exact-answer questions.</p>
+                  <p>
+                    <strong>Tech Stack:</strong> Python 3.11, ChromaDB, sentence-transformers (BGE-small-en-v1.5), Streamlit, Ragas, provider-agnostic LLM layer (Anthropic, OpenAI, Groq, Ollama).
+                  </p>
+                  <p>
+                    <strong>Key Result:</strong> Iterated from hit@k = 0.36 on a pure-RAG baseline to an agentic v2 that correctly answers factual lookups by routing them to structured data; full v1-vs-v2 evaluation harness reproducible from <code>evals/questions.yaml</code>.
+                  </p>
+                  <ul class="actions">
+                    <li>
+                      <a class="button" href="https://github.com/hall4jm/f1-rag">View on GitHub</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="content">
+            <div class="inner">
+              <div style="display: flex; align-items: flex-start;">
+                <div class="thumbnail" style="flex: 0 0 auto; margin-right: 20px;">
+                  <picture>
                     <source media="(min-width: 800px)" srcset="images/benign.jpg" />
                     <img alt="Ultrasound image used for breast cancer classification project" src="images/benign.jpg" style="width: 200px; height: auto; border-radius: 8px;" />
                   </picture>
                 </div>
                 <div style="flex: 1;">
                   <h2>Classifying Breast Cancer in Ultrasound Images</h2>
-                  <p>The aim of this project was to utilize current state-of-the-art CNN architectures for use in a pilot study to examine the ability of these algorithms to aid in the classification of breast cancer in breast ultrasounds (BUS) images.</p>
+                  <p>A CNN-based computer-aided diagnosis (CAD) pilot study evaluating transfer-learning architectures on breast ultrasound (BUS) images. The methodology emphasizes a defensible end-to-end ML workflow: augmentation (including MixUp), discriminative learning rates with the 1-cycle scheduler, Optuna TPE hyperparameter search, Neptune experiment tracking, and LIME + Grad-CAM interpretability so radiologists can see <em>where</em> the model is looking.</p>
                   <p>
-                    <strong>Tech Stack:</strong> PyTorch, FastAI, OpenCV, LIME, Hyperopt (TPE)
+                    <strong>Tech Stack:</strong> PyTorch, fastai, Optuna (TPE pruner), Neptune, LIME, scikit-image, OpenCV.
                   </p>
                   <p>
-                    <strong>Key Result:</strong> AUC = 0.94; reduced false positives by 18% using LIME interpretability.
-                  </p>
-                  <ul class="actions">
-                    <li>
-                      <a class="button" href="https://github.com/hall4jm/CapstoneBUS">Learn more</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-
-          <div class="content">
-            <div class="inner">
-              <div style="display: flex; align-items: flex-start;">
-                <div class="thumbnail" style="flex: 0 0 auto; margin-right: 20px;">
-                  <picture>
-                    <source media="(min-width: 800px)" srcset="images/FvsRb.jpg" />
-                    <img alt="Telemetry comparison image from Hungarian Grand Prix project" src="images/FvsRb.jpg" style="width: 200px; height: auto; border-radius: 8px;" />
-                  </picture>
-                </div>
-                <div style="flex: 1;">
-                  <h2>Analysis of the 2022 Hungarian GP</h2>
-                  <p>Ferrari is often thought to make terrible strategy calls. During the 2022 Hungarian GP they looked poised to take points from the rival Red Bull team but made some questionable calls. This project looks to telemetry data from the race to see if Ferrari made the right call.</p>
-                  <p>
-                    <strong>Tech Stack:</strong> Pandas, Matplotlib, Seaborn, Jupyter, F1 Telemetry API
-                  </p>
-                  <p>
-                    <strong>Key Insight:</strong> Strategy missteps validated with lap-by-lap delta analysis; Red Bull outpaced Ferrari by ~0.6s/lap on mediums.
+                    <strong>Key Result:</strong> AUC = 0.94 on benign/malignant classification; LIME overlays reduced false-positive rate by 18% versus the baseline by surfacing artifacts the model was anchoring on.
                   </p>
                   <ul class="actions">
                     <li>
-                      <a class="button" href="https://github.com/hall4jm/Hungarian-GP-Analysis/blob/main/F1Analysis.ipynb">Learn more</a>
+                      <a class="button" href="https://github.com/hall4jm/Deep_Learning_for_BUS">View on GitHub</a>
                     </li>
                   </ul>
                 </div>
@@ -153,23 +153,30 @@
             <div class="inner">
               <div style="display: flex; align-items: flex-start;">
                 <div class="thumbnail" style="flex: 0 0 auto; margin-right: 20px;">
-                  <picture>
-                    <source media="(min-width: 800px)" srcset="images/covid.jpg" />
-                    <img alt="COVID-related data visualization used for forecasting model" src="images/covid.jpg" style="width: 200px; height: auto; border-radius: 8px;" />
-                  </picture>
+                  <div aria-label="Stylized 3x3 tic-tac-toe board" role="img" style="width: 200px; height: 200px; background: #1d2939; border-radius: 8px; padding: 14px; box-sizing: border-box; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: 6px;">
+                    <div style="background: #2c3a52; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace; font-size: 32px; font-weight: bold; color: #ef4444;">X</div>
+                    <div style="background: #2c3a52; border-radius: 4px;"></div>
+                    <div style="background: #2c3a52; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace; font-size: 32px; font-weight: bold; color: #60a5fa;">O</div>
+                    <div style="background: #2c3a52; border-radius: 4px;"></div>
+                    <div style="background: #2c3a52; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace; font-size: 32px; font-weight: bold; color: #ef4444;">X</div>
+                    <div style="background: #2c3a52; border-radius: 4px;"></div>
+                    <div style="background: #2c3a52; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace; font-size: 32px; font-weight: bold; color: #60a5fa;">O</div>
+                    <div style="background: #2c3a52; border-radius: 4px;"></div>
+                    <div style="background: #2c3a52; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace; font-size: 32px; font-weight: bold; color: #ef4444;">X</div>
+                  </div>
                 </div>
                 <div style="flex: 1;">
-                  <h2>Forecasting COVID-19</h2>
-                  <p>This project aims to predict covid cases as well as covid hospitalizations as cases continue to rise around the globe. Another aim of this project is to learn more about time series analysis in all its forms (forecasting, spectral analysis, anomaly detection).</p>
+                  <h2>Custom OpenAI Gym Environment for Tic-Tac-Toe</h2>
+                  <p>A clean, minimal reinforcement-learning sandbox: a custom Gym environment wrapping 3×3 tic-tac-toe with a pygame renderer, an <code>env.run(agent1, agent2)</code> helper for full agent-vs-agent matches, and a tabular Q-learning self-play example with state canonicalization (one Q-table plays both sides). Built as a properly packaged, installable Python distribution.</p>
                   <p>
-                    <strong>Tech Stack:</strong> Statsmodels, fbprophet, TensorFlow, pip-tools
+                    <strong>Tech Stack:</strong> Python, OpenAI Gym 0.26, NumPy, pygame, <code>setup.py</code> entry-point registration.
                   </p>
                   <p>
-                    <strong>Model Performance:</strong> MAE = 135 on hospitalization forecasts over 7-day horizon; implemented Prophet and LSTM variants.
+                    <strong>Key Result:</strong> Tabular Q-learning agent reaches ~91% win rate against a random opponent after 30k self-play episodes; demonstrates API conformance to <code>gym.Env</code> (reset / step / render / close, action and observation spaces, seeding) end to end.
                   </p>
                   <ul class="actions">
                     <li>
-                      <a class="button" href="https://github.com/lucas98774/predicting-covid">Learn more</a>
+                      <a class="button" href="https://github.com/hall4jm/tictactoe_gym">View on GitHub</a>
                     </li>
                   </ul>
                 </div>
@@ -178,48 +185,30 @@
           </div>
         </section>
       </section>
-      <!-- Three -->
-      <section class="wrapper style3 fade-up" id="blog">
-        <div class="inner">
-          <h2>Latest Blog Posts</h2>
-          <p>Thoughts and breakdowns from recent projects.</p>
-          <ul>
-            <li>
-              <strong>[May 2025]</strong> - <a href="https://medium.com/@hall4jm/why-ferrari-flubbed-the-hungarian-gp">Why Ferrari Flubbed the Hungarian GP</a>
-            </li>
-            <li>
-              <strong>[April 2025]</strong> - <a href="https://medium.com/@hall4jm/interpreting-lime-on-breast-cancer-classification">Interpreting CNNs with LIME on Ultrasound Images</a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <!-- Contact -->
       <section class="wrapper style1 fade-up" id="three">
         <div class="inner">
-          <h2>Contact Information</h2>
-          <p> If you'd like to contact me please reach out to me via my email address or LinkedIn below. If you'd like to view more of my work please visit my GitHub profile. </p>
+          <h2>Contact</h2>
+          <p>The fastest way to reach me is email or LinkedIn. For more of my work, GitHub has the full set of repositories.</p>
           <section>
             <ul class="contact">
               <li>
                 <h3>
                   <a class="icon fa-envelope"></a> Email
                 </h3>
-                <a>hall4jm@gmail.com</a>
+                <a href="mailto:hall4jm@gmail.com">hall4jm@gmail.com</a>
               </li>
               <li>
                 <h3>
                   <a class="icon brands fa-linkedin"></a> LinkedIn
                 </h3>
-                <a href="https://www.linkedin.com/in/justin-hall-325703b3/">www.linkedin.com/in/justin-hall-325703b3/</a>
+                <a href="https://www.linkedin.com/in/justin-hall-325703b3/">linkedin.com/in/justin-hall-325703b3</a>
               </li>
               <li>
                 <h3>
                   <a class="icon brands fa-github"></a> GitHub
                 </h3>
-                <a href="https://github.com/hall4jm">www.github.com/hall4jm</a>
-              </li>
-              <li>
-                <h3>Thank You</h3>
-                <span></span>
+                <a href="https://github.com/hall4jm">github.com/hall4jm</a>
               </li>
             </ul>
           </section>
