@@ -43,10 +43,13 @@
       <section class="wrapper style1 fullscreen fade-up" id="intro">
         <div class="inner">
           <h1>Justin Hall</h1>
-          <p>Data scientist building multi-disciplinary ML systems — from retrieval-augmented LLM applications to deep learning for medical imaging to reinforcement learning environments. I care about reproducibility, calibrated evaluation, and turning models into decisions a stakeholder can act on.</p>
+          <p>Data scientist building production-minded ML systems — from retrieval-augmented LLM applications to deep learning for medical imaging to reinforcement learning environments. I care about reproducibility, calibrated evaluation, and turning models into decisions a stakeholder can act on.</p>
           <ul class="actions">
             <li>
               <a class="button scrolly" href="#one">Learn more</a>
+            </li>
+            <li>
+              <a class="button" href="files/Justin_Hall_Resume.pdf" target="_blank">Download Resume</a>
             </li>
           </ul>
         </div>
@@ -104,7 +107,7 @@
                     <strong>Tech Stack:</strong> Python 3.11, ChromaDB, sentence-transformers (BGE-small-en-v1.5), Streamlit, Ragas, provider-agnostic LLM layer (Anthropic, OpenAI, Groq, Ollama).
                   </p>
                   <p>
-                    <strong>Key Result:</strong> Iterated from hit@k = 0.36 on a pure-RAG baseline to an agentic v2 that correctly answers factual lookups by routing them to structured data; full v1-vs-v2 evaluation harness reproducible from <code>evals/questions.yaml</code>.
+                    <strong>Key Result:</strong> Diagnosed a weak pure-RAG baseline (hit@k = 0.36) and lifted retrieval 2.5&times; to hit@k = 0.91 by switching to BGE-small with asymmetric query/passage encoding; added an agentic v2 that routes factual lookups to the Jolpica F1 API via LLM tool-calls. Full v1-vs-v2 evaluation harness reproducible from <code>evals/questions.yaml</code>.
                   </p>
                   <ul class="actions">
                     <li>
@@ -128,12 +131,12 @@
                 </div>
                 <div style="flex: 1;">
                   <h2>Classifying Breast Cancer in Ultrasound Images</h2>
-                  <p>A CNN-based computer-aided diagnosis (CAD) pilot study evaluating transfer-learning architectures on breast ultrasound (BUS) images. The methodology emphasizes a defensible end-to-end ML workflow: augmentation (including MixUp), discriminative learning rates with the 1-cycle scheduler, Optuna TPE hyperparameter search, Neptune experiment tracking, and LIME + Grad-CAM interpretability so radiologists can see <em>where</em> the model is looking.</p>
+                  <p>A CNN-based computer-aided diagnosis (CAD) pilot study evaluating transfer-learning architectures on breast ultrasound (BUS) images. The methodology emphasizes a defensible end-to-end ML workflow: augmentation (including MixUp), discriminative learning rates with the 1-cycle scheduler, Optuna TPE hyperparameter search, Neptune experiment tracking, and LIME + Grad-CAM interpretability to surface <em>where</em> the model is looking.</p>
                   <p>
                     <strong>Tech Stack:</strong> PyTorch, fastai, Optuna (TPE pruner), Neptune, LIME, scikit-image, OpenCV.
                   </p>
                   <p>
-                    <strong>Key Result:</strong> AUC = 0.94 on benign/malignant classification; LIME overlays helped radiologists understand why the model was making certain predictions.
+                    <strong>Key Result:</strong> A reproducible, config-driven pipeline where a single JSON drives the full training and TPE search (learning rate, weight decay, batch size, freeze-phase length), with Neptune logging per-trial curves and confusion matrices and LIME + Grad-CAM overlays highlighting the image regions that drive each prediction.
                   </p>
                   <ul class="actions">
                     <li>
